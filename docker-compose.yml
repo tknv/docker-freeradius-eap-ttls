@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  eapttsl:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      network: host
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+    ports:
+      - 1812:1812/udp
+    dns_search: .
