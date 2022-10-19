@@ -26,16 +26,19 @@ Install Root CA and client cert by double click(usually) `pc.p12` and `ca.crt` i
 #### Windows
 
 Install cert and CA by double click `pc.p12` then double click `ca.crt`. And goto Control Panel > All Control Panel Items > Network and Sharing Center > Manually connect or Network.  
-**Network name** should be SSID (if use EAP TLS auth for wireless client). **Security type** `WPA2-Enterprise` even want to test `WPA3-Enterprise`. Later can change it to `WPA3-Enterprise`.   
+**Network name** should be SSID (if use EAP TLS auth for wireless client). **Security type** `WPA2-Enterprise`. Then Next.
 
-At Setting tick belows;
-
-* Use a certificate on this computer
-* Use simple certificate selection(Recommended)
-* Verify the server's identity by validating the certificate
-* Trusted Root Certification Authorities
-    * AWASLab  "which installed at previously as ca.crt"
-    * pc  "which installed at previously as pc.p12"
+At pop up. XXXX Wireless Network Properties.  
+Choose a network authentication method: Microsoft: EAP-TTLS  
+Settings > tick Enable identity privacy  
+Trusted Root Certification Authorities:  
+  tick AWASLab  
+Select a non-EAP method for authentication  
+  Unencrypted password (PAP), but others also fine. yet not use LDAP.  
+Then back to the pop up.  
+Advanced settings > tick specify authentication mode: 
+  User authentication > Save credentials.  
+    **User account** is `tknv@awas.lab`, `symbol123` 
 
 ### Linux
 
