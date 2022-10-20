@@ -1,13 +1,13 @@
 # EAP TTLS authentication
 
-This helps quick setup EAP TTLS for testing WPA2-Enterprise EAP TTLS and WPA3-Enterprise EAP TTLS (GCMP256).  
+This helps quick setup EAP TTLS for testing WPA2-Enterprise EAP TTLS.
 [FreeRadius](https://github.com/FreeRADIUS/freeradius-server) service it.
 
 ## Quick start
 
 ```bash
 git clone https://github.com/tknv/docker-radius-eap-ttls.git EAP-TTLS_FreeRadius
-cd EAP-TLS_FreeRadius
+cd EAP-TTLS_FreeRadius
 docker-compose up
 ```
 
