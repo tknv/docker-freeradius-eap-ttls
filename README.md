@@ -38,16 +38,15 @@ Settings > tick Enable identity privacy
 Trusted Root Certification Authorities:  
   tick AWASLab  
 Select a non-EAP method for authentication  
-  Unencrypted password (PAP) for now. But others also fine (need configure). E.g. Select an EAP method for authentication with EAP-TLS. 
+Unencrypted password (PAP) for now. But others also fine (need configure). E.g. Select an EAP method for authentication with EAP-TLS.  
 ![TTLS Property](./img/ttls-prop.png)  
-Then back to the pop up and Advanced settings > tick specify authentication mode: 
+Then back to the pop up and Advanced settings > tick specify authentication mode:  
 ![Advanced Settings](./img/advanced.png)  
-  User authentication > Save credentials.  
-    **User account** is `tknv`, `symbol`, it's in LDAP directory. Created by `bootstrap/idif/tknv.ldif`.
-    ![Save credential](./img/cred.png)  
+User authentication > Save credentials.  
+**User account** is `tknv`, `symbol`, it's in LDAP directory. Created by `bootstrap/idif/tknv.ldif`.
+![Save credential](./img/cred.png)  
 
-Auth user file user `tknv@awas.lab`, `symbol123`, it's in `user` file.
-    [To create/edit](#createedit-user)  
+Auth user file user `tknv@awas.lab`, `symbol123`, it's in `user` file. [To create/edit](#createedit-user)  
 
 ### Linux
 
