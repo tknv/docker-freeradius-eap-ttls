@@ -14,8 +14,6 @@ cd EAP-TTLS
 docker-compose up
 ```
 
-If facing error about slap.d and db. `sudo rm -rf slap.d` and `sudo rm -rf db`. and `docker-compose up` again.
-
 Install Root CA by double click(usually) `ca.crt` in EAP-TTLS directory.
 
 ## Usage
@@ -33,23 +31,23 @@ Install CA by double click `ca.crt`. And goto **Control Panel > All Control Pane
 **Network name** should be SSID (if use EAP TLS auth for wireless client). **Security type** `WPA2-Enterprise`. Then Next. Change connection settings comes and click it.
 
 At pop up. XXXX Wireless Network Properties.  
-![Wireless Network Property General](./img/wnp-con.png)
+![Wireless Network Property General](./img/wnp-con.png)  
 Choose a network authentication method: Microsoft: EAP-TTLS  
-![Wireless Network Property Security](./img/wnp-sec.png)
+![Wireless Network Property Security](./img/wnp-sec.png)  
 Settings > tick Enable identity privacy  
 Trusted Root Certification Authorities:  
   tick AWASLab  
 Select a non-EAP method for authentication  
   Unencrypted password (PAP) for now. But others also fine (need configure). E.g. Select an EAP method for authentication with EAP-TLS. 
-![TTLS Property](./img/ttls-prop.png)
+![TTLS Property](./img/ttls-prop.png)  
 Then back to the pop up and Advanced settings > tick specify authentication mode: 
-![Advanced Settings](./img/advanced.png)
+![Advanced Settings](./img/advanced.png)  
   User authentication > Save credentials.  
     **User account** is `tknv`, `symbol`, it's in LDAP directory. Created by `bootstrap/idif/tknv.ldif`.
-    ![Save credential](./img/cred.png)
+    ![Save credential](./img/cred.png)  
 
 Auth user file user `tknv@awas.lab`, `symbol123`, it's in `user` file.
-    [To create/edit](#createedit-user)
+    [To create/edit](#createedit-user)  
 
 ### Linux
 
@@ -99,9 +97,10 @@ Via web browser http://<the docker host IP address>:18080
 ![PHP LDAP ADMIN](./img/phpldapadmin.png "Log in to php ldap admin")
 
 Also, via https://directory.apache.org/studio/
-![Apache Directory Studio connection](./img/ads01.png "Property Connection Network parameters")
+![Apache Directory Studio connection](./img/ads01.png "Property Connection Network parameters")  
 To connect via ldaps uses port 636. ldap uses port 389.
-![Apache Directory Studio connection](./img/ads02.png "Property Connection Authentications")
+![Apache Directory Studio connection](./img/ads02.png "Property Connection Authentications")  
+password is `symbol`  
 It should connected and able to create/edit/delete user.
 
 ## See also
