@@ -81,7 +81,7 @@ by [stackoverflow.com](https://stackoverflow.com/questions/40747952/freeradius-a
 
 ## Create/Edit user
 
-### user in `users` file.
+### user in `users` file
 
 Example creation.
 
@@ -90,12 +90,15 @@ foo@awas.lab Cleartext-Password := "foopasswd"
   Service-Type = Administrative-User, Filter-Id += "Entrasys:mgmt=su:", Filter-Id += "Entrasys:version=1:mgmt=su:"
 ```
 
-### user in LDAP.
+### user in LDAP
 
-Via web browser http://<the docker host IP address>:18080
-![PHP LDAP ADMIN](./img/phpldapadmin.png "Log in to php ldap admin")
+PHP LDAP ADMIN:
+Via web browser http://<the docker host IP address>:18080  
+![PHP LDAP ADMIN](./img/phpldapadmin.png "Log in to php ldap admin")  
+Password is `symbol`
 
-Also, via https://directory.apache.org/studio/
+Apache Directory Studio:
+Via https://directory.apache.org/studio/
 ![Apache Directory Studio connection](./img/ads01.png "Property Connection Network parameters")  
 To connect via ldaps uses port 636. ldap uses port 389.
 ![Apache Directory Studio connection](./img/ads02.png "Property Connection Authentications")  
