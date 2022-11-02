@@ -90,10 +90,10 @@ foo@awas.lab Cleartext-Password := "foopasswd"
   Service-Type = Administrative-User, Filter-Id += "Entrasys:mgmt=su:", Filter-Id += "Entrasys:version=1:mgmt=su:"
 ```
 
-### user in LDAP
+### user in directory
 
 PHP LDAP ADMIN:  
-Via web browser http://<the docker host IP address>:18080  
+Via web browser http://\<the docker host IP address\>:18080  
 ![PHP LDAP ADMIN](./img/phpldapadmin.png "Log in to php ldap admin")  
 Password is `symbol`
 
