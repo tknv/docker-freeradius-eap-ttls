@@ -56,7 +56,13 @@ authorize {
 		updated = return
 	}
 	unix
+	# -ldap
 	-ldap
+	if ((ok || updated) && User-Password && !control:Auth-Type) {
+		update {
+		    control:Auth-Type := ldap
+		       }
+	}
 #	IPASS
 #	suffix
 	ntdomain
@@ -73,6 +79,9 @@ authorize {
 authenticate {
 	Auth-Type PAP {
 		pap
+	}
+	Auth-Type LDAP {
+		ldap
 	}
 }
 
